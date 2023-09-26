@@ -1,0 +1,47 @@
+{% extends "app/base.html" %}
+{% load static %}
+{% block login_content %}
+<div class="bg-dark text-white" style="height: 100vh;">
+    <div class="form-content row mx-auto" >
+        <div class="col-lg-6" >
+ 
+  <div  style="width: 100%;height: 100%;  background-color: #5372F0 ;" >
+           
+           </div> 
+        </div>
+        <div class="col-lg-6" style="margin-top: 25%;">
+            <form>
+                <div class="d-flex align-items-center" >
+                    <div class="mx-auto  " style="width:50% ;height: 50%;">
+                        <div class="mb-5" >
+                            <h2><strong>Hello Again!</strong></h2>
+                            <h5 class="fw-light fst-italic">wellcom Back</h5>
+                        </div>
+                        <div class="form-group my-3">
+                          
+                          <input type="email" class="form-control rounded-pill" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" style="width:100%;">
+                          
+                        </div>
+                        <div class="form-group my-3">
+                            <input type="password" class="form-control rounded-pill" id="exampleInputPassword1" placeholder=" Password"  style="width: 100%;">
+                        </div>
+                        <div >
+                            <button type="submit" class="btn btn-primary rounded-pill"style="width: 100%;" >Login</button>
+                            <br>
+                            <br>
+                                <a class="d-flex justify-content-center" style="text-align: center;" href="">Forgot password</a>
+                                
+                           
+                        </div>
+                       
+                    </div>
+                </div>
+                    
+               
+              </form>
+            
+        </div>
+    </div>
+</div>
+
+{% endblock login_content %}
