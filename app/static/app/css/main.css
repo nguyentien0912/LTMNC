@@ -14,7 +14,7 @@
 }
 body{
 
-  min-height: 100vh;
+  max-height: 100vh;
   background: #5372F0;
 }
 .container{
@@ -26,7 +26,7 @@ body{
 }
 .wrapper{
   border-radius: 5px;
-  border: 1px solid #bbb;
+  border: 1px solid #0f0e0e;
 }
 .wrapper .text-input{
   display: flex;
