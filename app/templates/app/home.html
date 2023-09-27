@@ -1,50 +1,42 @@
-{% extends "app/base.html" %}
-{% load static %}
-{% block main_content %}
-<div >
-  <div class="container-fluid wrapper" >
-    <div class="row">
-      <div class="col-lg-12">
-        <nav class="navbar navbar-default">
-          <div class="container-fluid">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header">
-              <a class="navbar-brand text-white" href="#">TEXT TO SPEECH</a>
-            </div>
-  
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="navbar">
-              <p  class="text-center:" style=" padding-top : 10px ;margin-right: 25px;"> product1</p>
-              <button class="btn btn-dark">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-box-arrow-right" viewBox="0 0 16 16">
-                  <path fill-rule="evenodd" d="M10 12.5a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v2a.5.5 0 0 0 1 0v-2A1.5 1.5 0 0 0 9.5 2h-8A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-2a.5.5 0 0 0-1 0v2z"/>
-                  <path fill-rule="evenodd" d="M15.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 0 0-.708.708L14.293 7.5H5.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3z"/>
-                </svg>  Logout
-              </button>
-             
-             
-            </div>
-            <!-- /.navbar-collapse -->
-          </div>
-          <!-- /.container-fluid -->
-        </nav>
+{% extends "app/base.html" %} {% load static %} {% block main_content %}
+<div>
+  <header>
+    <div class="navbar-container" style="background-color: white; border-bottom: 1px solid gray; display: flex; justify-content: space-between;align-items: center; padding: 20px 30px">
+      <div class="logo-wrapper">
+        <span style="font-weight: 900;">📃TEXT TO SPEECH🎙️</span>
+      </div>
+      <div class="navbar-left" style="display: flex; justify-self: center; align-items: center;">
+        <span id="username" style="margin-right: 10px;">👋Welcome, Username</span>
+        <div class="logout-wrapper">
+          <i class="fa-solid fa-right-from-bracket" id="logout-btn"></i>
+        </div>
       </div>
     </div>
-  </div>
-  <div class="container" >
-    <div class="wrapper">
+  </header>
+  <div class="container">
+    <div id="tts-wrapper" class="wrapper">
       <div class="text-input">
-        <textarea class="from-text" placeholder="Enter text"></textarea>
+        <textarea class="from-text" placeholder="Enter text" style="border: none;"></textarea>
       </div>
-      <div >
-        <button id="text-input-btn">Text To Speech</button>
+      <div style="border-bottom: 1px solid #0f0e0e;"></div>
+      <div style="display: flex; justify-content: space-evenly;align-items: center;height: 60px;">
+        <div class="lang-options-wrapper">
+          <label for="langs">Select Language:</label>
+          <select id="langs" name="cars">
+            <option value="vietnamese">Vietnamese</option>
+            <option value="english">English</option>
+          </select>
+        </div>
+        <button id="text-input-btn" style="width: 40%;height: 80%;">Text To Speech</button>
+      </div>
+      <div style="border-bottom: 1px solid #0f0e0e;"></div>
+      <div id="media-wrapper" style="display: flex; justify-content: center; align-items: center;">
       </div>
     </div>
   </div>
 </div>
-</div>
-
-
-
-
+<script>
+  var loginUrl = "{% url 'login' %}";
+</script>
+<script src="{%static 'app/js/home.js'%}"></script>
 {% endblock main_content %}

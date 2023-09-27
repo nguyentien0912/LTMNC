@@ -1,57 +1,86 @@
 {% extends "app/base.html" %} {% load static %} {% block login_content %}
-<div class="row" style="margin-right: 0;height: 100vh;">
-    <div class="bg-dark text-white" >
-      <div class="form-content row mx-auto">
-        <div class="col-lg-6">
-          <div style="width: 100%; height: 100%; background-color: #5372F0"></div>
-        </div>
-        <div class="col-lg-6" style="margin-top: 20%">
-          <form>
-            <div class="d-flex align-items-center">
-              <div class="mx-auto" style="width: 50%; height: 50%">
-                <div class="mb-5">
-                  <h2><strong>Hello Again!</strong></h2>
-                  <h5 class="fw-light fst-italic">welcome Back</h5>
-                </div>
-                <div class="form-group my-3">
-                  <input
-                    type="email"
-                    class="form-control rounded-pill"
-                    id="exampleInputEmail1"
-                    aria-describedby="emailHelp"
-                    placeholder="Enter email"
-                    style="width: 100%" />
-                </div>
-                <div class="form-group my-3">
-                  <input
-                    type="password"
-                    class="form-control rounded-pill"
-                    id="exampleInputPassword1"
-                    placeholder=" Password"
-                    style="width: 100%" />
-                </div>
-                <div>
-                  <button
-                    type="submit"
-                    class="btn btn-primary rounded-pill"
-                    style="width: 100%">
-                    Login
-                  </button>
-                  <br />
-                  <br />
-                  <a
-                    class="d-flex justify-content-center"
-                    style="text-align: center"
-                    href="{% url "signup" %}"
-                    >Đăng kí</a
-                  >
-                </div>
-              </div>
+<div class="row" style="margin-right: 0; height: 100vh">
+  <div class="bg-dark text-white">
+    <div class="form-content row mx-auto">
+      <div class="col-lg-6">
+        <div
+          style="
+            width: 100%;
+            height: 100%;
+            background-color: #5372f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          ">
+          <div>
+            <p style="font-weight: 900; font-size: 2rem">TEXT TO SPEECH</p>
+            <div
+              style="
+                display: flex;
+                justify-content: center;
+                align-items: center;
+              ">
+              <img
+                src="../../static/app/image/logo.png"
+                alt="logo"
+                style="width: 120px; height: 120px" />
             </div>
-          </form>
+          </div>
+        </div>
+      </div>
+      <div
+        class="col-lg-6"
+        style="display: flex; justify-content: center; align-items: center">
+        <div class="form-wrapper">
+          <div class="d-flex align-items-center">
+            <div class="mx-auto">
+              <div class="mb-5">
+                <h2><strong>Hello Again!</strong></h2>
+                <h5 class="fw-light fst-italic">Welcome Back👋</h5>
+              </div>
+              <form style="width: 100%" id="login-form">
+                <input
+                  type="email"
+                  class="form-control rounded-pill"
+                  id="login-input-email"
+                  name="login-input-email"
+                  aria-describedby="emailHelp"
+                  placeholder="Enter email"
+                  style="margin-bottom: 20px" />
+                <input
+                  type="password"
+                  class="form-control rounded-pill"
+                  id="login-input-password"
+                  name="login-input-password"
+                  placeholder="Password"
+                  style="margin-bottom: 20px" />
+              </form>
+              <button
+                id="login-btn"
+                type="button"
+                class="btn btn-primary rounded-pill"
+                form="login-form"
+                style="width: 100%; margin-bottom: 20px">
+                Login
+              </button>
+              <button
+                id="to-signup-btn"
+                type="button"
+                class="btn btn-primary rounded-pill text-black bg-white"
+                style="width: 100%">
+                Sign up
+              </button>
+              <div></div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </div>
 </div>
+<script>
+  var homeUrl = "{% url 'home' %}";
+  var signupUrl = "{% url 'signup' %}";
+</script>
+<script src="{% static 'app/js/login.js' %}"></script>
 {% endblock login_content %}

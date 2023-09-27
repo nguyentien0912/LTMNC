@@ -1,49 +1,85 @@
-{% extends "app/base.html" %}
-{% load static %}
-{% block signup_content %}
-<div class="bg-dark text-white" style="height: 100vh;">
-    <div class="form-content row mx-auto " >
-        <div class="col-lg-6" >
-           <div class="bg-primary" style="width: 100%;height: 100%;" >
-           
-           </div>
-            
+{% extends "app/base.html" %} {% load static %} {% block signup_content %}
+<div class="row" style="margin-right: 0; height: 100vh">
+  <div class="bg-dark text-white">
+    <div class="form-content row mx-auto">
+      <div class="col-lg-6">
+        <div
+          style="
+            width: 100%;
+            height: 100%;
+            background-color: #5372f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          ">
+          <div>
+            <p style="font-weight: 900; font-size: 2rem">TEXT TO SPEECH</p>
+            <div
+              style="
+                display: flex;
+                justify-content: center;
+                align-items: center;
+              ">
+              <img
+                src="../../static/app/image/logo.png"
+                alt="logo"
+                style="width: 120px; height: 120px" />
+            </div>
+          </div>
         </div>
-    
-        <div class="col-lg-6">
-            <form>
-                <div class="d-flex align-items-center" style="margin-top: 35%;">
-                    <div class="mx-auto  " style="width:50% ;height: 50%;">
-                        <div class="mb-5" >
-                            <h2><strong>Hello!</strong></h2>
-                            <h5 class="fw-light fst-italic">Sign Up to Get start</h5>
-                        </div> 
-                        <div class="form-group my-3">
-                          
-                            <input type="email" class="form-control rounded-pill" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Fullname" style="width:100%;">
-                            
-                          </div>
-                        <div class="form-group my-3">
-                          
-                          <input type="email" class="form-control rounded-pill" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" style="width:100%;">
-                          
-                        </div>
-                        <div class="form-group my-3">
-                            <input type="password" class="form-control rounded-pill" id="exampleInputPassword1" placeholder=" Password"  style="width: 100%;">
-                        </div>
-                        <div >
-                            <button type="submit" class="btn btn-primary rounded-pill"style="width: 100%;" >Regiter</button>
-                            
-                        </div>
-                       
-                    </div>
-                </div>
-                    
-               
+      </div>
+      <div
+        class="col-lg-6"
+        style="display: flex; justify-content: center; align-items: center">
+        <div class="form-wrapper">
+          <div class="d-flex align-items-center">
+            <div class="mx-auto">
+              <div class="mb-5">
+                <h2><strong>New Person?</strong></h2>
+                <h5 class="fw-light fst-italic">Sign up now!</h5>
+              </div>
+              <form style="width: 100%" id="signup-form">
+                <input
+                  type="email"
+                  class="form-control rounded-pill"
+                  id="signup-input-email"
+                  name="signup-input-email"
+                  aria-describedby="emailHelp"
+                  placeholder="Enter email"
+                  style="margin-bottom: 20px" />
+                <input
+                  type="password"
+                  class="form-control rounded-pill"
+                  id="signup-input-password"
+                  name="signup-input-password"
+                  placeholder="Password"
+                  style="margin-bottom: 20px" />
+                <input
+                  type="cfpassword"
+                  class="form-control rounded-pill"
+                  id="signup-input-cfpassword"
+                  name="signup-input-cfpassword"
+                  placeholder="Confirm password"
+                  style="margin-bottom: 20px" />
               </form>
-            
+              <button
+                id="signup-btn"
+                type="button"
+                class="btn btn-primary rounded-pill"
+                form="signup-form"
+                style="width: 100%; margin-bottom: 20px">
+                Sign up
+              </button>
+              <div></div>
+            </div>
+          </div>
         </div>
+      </div>
     </div>
+  </div>
 </div>
-
+<script>
+  var homeUrl = "{% url 'home' %}";
+</script>
+<script src="{% static 'app/js/signup.js' %}"></script>
 {% endblock signup_content %}

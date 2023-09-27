@@ -15,7 +15,7 @@
     transition: transform .5s ease;
   }
  .owl-carousel img:hover{
-    
+
     transform : scale(1.25);
 } */
 
@@ -78,7 +78,7 @@
     width:43%;
     margin:0 auto;
     text-align:center;
-    
+
 }
 
 .goodnesssec a{
