@@ -122,3 +122,8 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# Cấu hình session
+SESSION_ENGINE = 'django.contrib.sessions.backends.db'  # Lưu sessions vào cơ sở dữ liệu
+SESSION_COOKIE_NAME = 'user_authenticated'  # Tên của cookie sẽ được sử dụng để lưu session ID
+SESSION_SAVE_EVERY_REQUEST = True  # Lưu session sau mỗi request, nếu bạn muốn lưu thông tin session ngay lập tức

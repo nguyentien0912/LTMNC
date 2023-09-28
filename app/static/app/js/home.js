@@ -8,7 +8,7 @@ button.addEventListener("click", function () {
     var textareaValue = textarea.value;
 
     // Gửi yêu cầu POST đến API Flask
-    fetch("https://3cd5-2405-4803-d7cd-4d50-11e0-d12-6288-8244.ngrok-free.app/tts", {
+    fetch("http://127.0.0.1:5000/tts", {
         method: "POST",
         headers: {
             "Content-Type": "application/json"
